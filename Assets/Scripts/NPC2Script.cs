@@ -34,6 +34,7 @@ public class NPC2Script : MonoBehaviour {
     {
         if (other.name == "Character" && wasClicked == true && walkingScript.itemObtained[1] == false) 
         {
+            FindObjectOfType<AudioManager>().Play("DogSound");
             walkingScript.animator.Play("Character_Interact");
             animator.Play("Dog_Interact");
             walkingScript.itemObtained[1] = true;
@@ -43,6 +44,7 @@ public class NPC2Script : MonoBehaviour {
         if (other.name == "Character" && giveItem == true && walkingScript.NPC2Unlock == false)
         {
             walkingScript.animator.Play("Character_Interact");
+            FindObjectOfType<AudioManager>().Play("DogSound");
             animator.Play("Dog_Interact");
             itemH.SetActive(false);
             walkingScript.NPC2Unlock = true;

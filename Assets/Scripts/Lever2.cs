@@ -68,6 +68,7 @@ public class Lever2 : MonoBehaviour {
                 if (isUp2 == true)
                 {
                     walkingScript.animator.Play("Character_Interact");
+                    FindObjectOfType<AudioManager>().Play("Lever");
 
                     lever1Script.isUp2 = false;
                     isUp2 = false;
@@ -75,6 +76,7 @@ public class Lever2 : MonoBehaviour {
                 else
                 {
                     walkingScript.animator.Play("Character_Interact");
+                    FindObjectOfType<AudioManager>().Play("Lever");
 
                     lever1Script.isUp2 = true;
                     isUp2 = true;
@@ -83,12 +85,14 @@ public class Lever2 : MonoBehaviour {
                 if (isUp3 == true)
                 {
                     walkingScript.animator.Play("Character_Interact");
+                    FindObjectOfType<AudioManager>().Play("Lever");
 
                     isUp3 = false;
                 }
                 else
                 {
                     walkingScript.animator.Play("Character_Interact");
+                    FindObjectOfType<AudioManager>().Play("Lever");
 
                     isUp3 = true;
                 }
@@ -96,6 +100,7 @@ public class Lever2 : MonoBehaviour {
                 if (isUp4 == true)
                 {
                     walkingScript.animator.Play("Character_Interact");
+                    FindObjectOfType<AudioManager>().Play("Lever");
 
                     lever3Script.isUp4 = false;
                     isUp4 = false;
@@ -103,6 +108,7 @@ public class Lever2 : MonoBehaviour {
                 else
                 {
                     walkingScript.animator.Play("Character_Interact");
+                    FindObjectOfType<AudioManager>().Play("Lever");
 
                     lever3Script.isUp4 = true;
                     isUp4 = true;

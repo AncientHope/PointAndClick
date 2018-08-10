@@ -34,6 +34,7 @@ public class NPC1Script : MonoBehaviour {
     {
         if (other.name == "Character" && wasClicked == true && walkingScript.itemObtained[0] == false) 
         {
+            FindObjectOfType<AudioManager>().Play("CatSound");
             walkingScript.animator.Play("Character_Interact");
             animator.Play("Cat_Interact");
             walkingScript.itemObtained[0] = true;
@@ -42,6 +43,7 @@ public class NPC1Script : MonoBehaviour {
 
         if (other.name == "Character" && giveItem == true && walkingScript.NPC1Unlock == false)
         {
+            FindObjectOfType<AudioManager>().Play("CatSound");
             walkingScript.animator.Play("Character_Interact");
             animator.Play("Cat_Interact");
             itemG.SetActive(false);

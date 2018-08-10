@@ -38,6 +38,8 @@ public class Puzzle3 : MonoBehaviour
     {
         if(walkingScript.itemUsed[4] == true && walkingScript.itemUsed[5] == true && walkingScript.itemObtained[6] == false)
         {
+            FindObjectOfType<AudioManager>().Play("Chest");
+
             itemG.enabled = true;
             itemH.enabled = true;
             walkingScript.itemObtained[6] = true;
