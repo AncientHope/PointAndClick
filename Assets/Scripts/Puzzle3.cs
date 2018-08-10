@@ -36,7 +36,7 @@ public class Puzzle3 : MonoBehaviour
     //Checking used Items and displaying sprites
     void Update()
     {
-        if(walkingScript.itemUsed[4] == true && walkingScript.itemUsed[5] == true && walkingScript.itemObtained[6] == false)
+        if(walkingScript.itemUsed[4] == true && walkingScript.itemUsed[5] == true && walkingScript.itemObtained[6] == false && walkingScript.itemUnlocked[2] == true && walkingScript.itemUnlocked[3] == true)
         {
             FindObjectOfType<AudioManager>().Play("Chest");
 

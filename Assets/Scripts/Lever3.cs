@@ -62,63 +62,62 @@ public class Lever3 : MonoBehaviour
     //Checking for Player click and collision and changing lever position
     void OnTriggerStay2D(Collider2D other)
     {
-        if (walkingScript.itemUnlocked[2] == true && walkingScript.itemUnlocked[3] == true)
+
+        if (other.name == "Character" && wasClicked == true)
         {
-            if (other.name == "Character" && wasClicked == true)
+            wasClicked = false;
+
+            if (isUp1 == true)
             {
-                wasClicked = false;
+                walkingScript.animator.Play("Character_Interact");
+                FindObjectOfType<AudioManager>().Play("Lever");
 
-                if (isUp1 == true)
-                {
-                    walkingScript.animator.Play("Character_Interact");
-                    FindObjectOfType<AudioManager>().Play("Lever");
-
-                    lever1Script.isUp1 = false;
-                    isUp1 = false;
-                }
-                else
-                {
-                    walkingScript.animator.Play("Character_Interact");
-                    FindObjectOfType<AudioManager>().Play("Lever");
-
-                    lever1Script.isUp1 = true;
-                    isUp1 = true;
-                }
-
-                if (isUp4 == true)
-                {
-                    walkingScript.animator.Play("Character_Interact");
-                    FindObjectOfType<AudioManager>().Play("Lever");
-
-                    lever2Script.isUp4 = false;
-                    isUp4 = false;
-                }
-                else
-                {
-                    walkingScript.animator.Play("Character_Interact");
-                    FindObjectOfType<AudioManager>().Play("Lever");
-
-                    lever2Script.isUp4 = true;
-                    isUp4 = true;
-                }
-
-                if (isUp5 == true)
-                {
-                    walkingScript.animator.Play("Character_Interact");
-                    FindObjectOfType<AudioManager>().Play("Lever");
-
-                    lever1Script.isUp5 = false;
-                    isUp5 = false;
-                }
-                else
-                {
-                    walkingScript.animator.Play("Character_Interact");
-                    FindObjectOfType<AudioManager>().Play("Lever");
-
-                    lever1Script.isUp5 = true;
-                    isUp5 = true;
-                }
+                lever1Script.isUp1 = false;
+                isUp1 = false;
             }
+            else
+            {
+                walkingScript.animator.Play("Character_Interact");
+                FindObjectOfType<AudioManager>().Play("Lever");
+
+                lever1Script.isUp1 = true;
+                isUp1 = true;
+            }
+
+            if (isUp4 == true)
+            {
+                walkingScript.animator.Play("Character_Interact");
+                FindObjectOfType<AudioManager>().Play("Lever");
+
+                lever2Script.isUp4 = false;
+                isUp4 = false;
+            }
+            else
+            {
+                walkingScript.animator.Play("Character_Interact");
+                FindObjectOfType<AudioManager>().Play("Lever");
+
+                lever2Script.isUp4 = true;
+                isUp4 = true;
+            }
+
+            if (isUp5 == true)
+            {
+                walkingScript.animator.Play("Character_Interact");
+                FindObjectOfType<AudioManager>().Play("Lever");
+
+                lever1Script.isUp5 = false;
+                isUp5 = false;
+            }
+            else
+            {
+                walkingScript.animator.Play("Character_Interact");
+                FindObjectOfType<AudioManager>().Play("Lever");
+
+                lever1Script.isUp5 = true;
+                isUp5 = true;
+            }
+
         }
     }
 

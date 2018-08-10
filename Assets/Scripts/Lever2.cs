@@ -59,8 +59,8 @@ public class Lever2 : MonoBehaviour {
     //Checking for Player click and collision and changing lever position
     void OnTriggerStay2D(Collider2D other)
     {
-        if (walkingScript.itemUnlocked[2] == true && walkingScript.itemUnlocked[3] == true)
-        {
+        
+        
             if (other.name == "Character" && wasClicked == true)
             {
                 wasClicked = false;
@@ -114,7 +114,7 @@ public class Lever2 : MonoBehaviour {
                     isUp4 = true;
                 }
             }
-        }
+        
     }
     
 

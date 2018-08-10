@@ -49,7 +49,7 @@ public class Puzzle2P1 : MonoBehaviour
             crystalE.SetActive(true);
 
         //Completing Puzzle if all crystals are Up
-        if(lever1Script.isUp1 == true && lever2Script.isUp2 == true && lever2Script.isUp3 == true && lever2Script.isUp4 == true && lever3Script.isUp5 == true && walkingScript.itemUnlocked[1] == false)
+        if(lever1Script.isUp1 == true && lever2Script.isUp2 == true && lever2Script.isUp3 == true && lever2Script.isUp4 == true && lever3Script.isUp5 == true && walkingScript.itemUnlocked[1] == false && walkingScript.itemUsed[2] == true && walkingScript.itemUsed[3] == true)
         {
             walkingScript.itemUnlocked[1] = true;
             walkingScript.animator.Play("Character_Interact");
